@@ -1,12 +1,20 @@
 import numpy as np
-a = np.array([1, 2, 3])
-print(a)
-
-b = np.array([[9, 0, 8, 0, 7, 0], [6, 0, 5, 0, 4, 0]])
+a = np.array([[1,2,3,4,5,6,7],[8,9,10,11,12,13,14]])
+print(a[1, -2])
+print(a[0, :])
+print(a[:, 2])
+print(a[0, 1:6:2])
+b = np.zeros((2, 3))
 print(b)
-
-print(a.ndim) #Get DImension
-print(b.ndim)
-
-print(a.shape)
-print(b.shape)
+b = np.full((2,2), 99)
+print(b)
+b = np.full_like(a, 4)
+print(b)
+b = np.random.rand(4, 2)
+print(b)
+b = np.random.random_sample(a.shape)
+print(b)
+b = np.random.randint(7, size = (3,3)) #random int between 0, 7
+print(b)
+b = np.identity(3)
+print(b)
